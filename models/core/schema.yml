@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: core__source1_nv_monthly_extract_cleansed
+    description: Extract of source 1 (NV) leads -- cleansed
