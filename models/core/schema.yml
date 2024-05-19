@@ -5,3 +5,5 @@ models:
     description: Extract of source 1 (NV) leads -- cleansed  
   - name: core__source2_ok_monthly_extract_cleansed
     description: Extract of source 2 (OK) leads -- cleansed
+  - name: core__source3_tx_monthly_extract_cleansed
+    description: Extract of source 3 (TX) leads -- cleansed
