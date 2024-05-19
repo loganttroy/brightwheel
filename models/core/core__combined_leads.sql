@@ -31,7 +31,8 @@ with nv as (
         title,
         null as website,
         zip,
-        null as facility_type
+        null as facility_type,
+        'source1' as lead_source
     from {{ ref('core__source1_nv_monthly_extract_cleansed') }}
 ),
 ok as (
@@ -67,7 +68,8 @@ ok as (
         title,
         null as website,
         zip,
-        null as facility_type
+        null as facility_type,
+        'source2' as lead_source
     from {{ ref('core__source2_ok_monthly_extract_cleansed') }}
 ),
 tx as (
@@ -103,7 +105,8 @@ tx as (
         null as title,
         null as website,
         zip,
-        null as facility_type
+        null as facility_type,
+        'source3' as lead_source
     from {{ ref('core__source3_tx_monthly_extract_cleansed') }}
 ),
 final as (

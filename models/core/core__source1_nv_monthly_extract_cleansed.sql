@@ -1,6 +1,7 @@
 {% set provisional_license_string = '(PROVISIONAL)' %}
 {% set company_name_location_delimeter = ' - ' %}
 {% set phone_number_extra_characters = '()- ' %}
+
 with final as (
     select 
         trim(split_part("name",'{{ company_name_location_delimeter }}',1)) as company,

@@ -7,3 +7,7 @@ models:
     description: Extract of source 2 (OK) leads -- cleansed
   - name: core__source3_tx_monthly_extract_cleansed
     description: Extract of source 3 (TX) leads -- cleansed
+  - name: core__combined_leads
+    description: Combined leads from this month's extract files (Salesforce excluded)
+  - name: core__salesforce_leads_standardized
+    description: Salesforce existing leads translated into standardized schema format

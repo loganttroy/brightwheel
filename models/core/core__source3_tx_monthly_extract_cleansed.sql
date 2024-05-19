@@ -1,7 +1,6 @@
 {% set phone_number_extra_characters = '()- ' %}
 {% set license_type_prefix = 'Licensed' %}
 
-
 with final as (
     select 
         "address",

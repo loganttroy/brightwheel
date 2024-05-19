@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: publish__updated_salesforce_leads
+    description: Data mart of existing Salesforce leads combined with this month's extracts, in a single schema
+  - name: publish__keyed_combined_leads
+    description: Data mart adding a uniquness key to combined leads for analysis (would be made obsolete by a proper CDC/incremental data load)

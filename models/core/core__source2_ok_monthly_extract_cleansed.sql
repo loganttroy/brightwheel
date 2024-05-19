@@ -3,7 +3,6 @@
 {% set phone_number_extra_characters = '()- ' %}
 {% set primary_caregiver_delimeter = '\n' %}
 
-
 with final as (
     select 
         trim(split_part(type_license,'-',1)) as license_type,
