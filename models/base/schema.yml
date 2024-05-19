@@ -1,6 +1,12 @@
 version: 2
 
 models:
+  - name: base__source1_nv_monthly_extract
+    description: Extract of source 1 (NV) leads -- new and updated
+  - name: base__source2_ok_monthly_extract
+    description: Extract of source 2 (OK) leads -- new and updated
+  - name: base__source3_tx_monthly_extract
+    description: Extract of source 3 (TX) leads -- new and updated
   - name: base__salesforce_leads
     description: Extract of existing Salesforce leads
     columns:
