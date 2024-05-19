@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: base__salesforce_leads
+    description: Extract of existing Salesforce leads
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: is_deleted
+        description: Has the lead been deleted?
+        tests:
+          - accepted_values:
+              values: ['TRUE','FALSE']
+      - name: is_converted
+        description: Has the lead been converted to a customer?
+        tests:
+          - accepted_values:
+              values: ['TRUE','FALSE']
