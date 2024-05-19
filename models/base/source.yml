@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: salesforce
+    database: brightwheel
+    schema: salesforce
+    tables:
+      - name: brightwheel_salesforce_leads
+        description: Extract of existing salesforce leads
