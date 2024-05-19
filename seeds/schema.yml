@@ -1,0 +1,9 @@
+version: 2
+
+seeds:
+  - name: seed__source1
+    description: Monthly new leads from source 1 (NV) -- meant to simulate external data drops, so tested/documented within dbt base DAG only
+  - name: seed__source2
+    description: Monthly new leads from source 2 (OK) -- meant to simulate external data drops, so tested/documented within dbt base DAG only
+  - name: seed__source3
+    description: Monthly new leads from source 3 (TX) -- meant to simulate external data drops, so tested/documented within dbt base DAG only

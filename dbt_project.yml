@@ -18,3 +18,7 @@ clean-targets:
   - "target"
   - "dbt_packages"
   - "logs"
+
+seeds:
+  brightwheel:
+    +schema: seed

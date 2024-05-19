@@ -3,3 +3,4 @@ profiles.yml
 dbt-env-brightwheel/
 logs/
 .user.yml
+target/*
