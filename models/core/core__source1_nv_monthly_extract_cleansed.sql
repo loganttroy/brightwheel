@@ -1,9 +1,11 @@
-{% set provisional_license_string = '(Provisional)' %}
+{% set provisional_license_string = '(PROVISIONAL)' %}
+{% set company_name_location_delimeter = ' - ' %}
+{% set phone_number_extra_characters = '()- ' %}
 
 with final as (
     select 
-        trim(split_part("name",'-',1)) as company_name,
-        trim(split_part("name",'-',2)) as company_location,
+        trim(split_part("name",'{{ company_name_location_delimeter }}',1)) as company_name,
+        trim(split_part("name",'{{ company_name_location_delimeter }}',2)) as company_location,
         case when credential_type like '%{{ provisional_license_string }}%' then 'Provisional' else 'Full Permit' end as license_status,
         trim(replace(credential_type,'{{provisional_license_string}}','')) as credential_type,
         credential_number,
@@ -14,7 +16,7 @@ with final as (
         trim(split_part("address",',',-2)) as address_street_and_city, -- TODO need to separate out later
         "state" as address_state,
         county as addresss_county,
-        replace(phone,'-','') as phone,
+        translate(phone,'{{ phone_number_extra_characters }}','') as phone,
         first_issue_date::date as license_issue_date,
         primary_contact_name,
         primary_contact_role

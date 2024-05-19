@@ -2,4 +2,6 @@ version: 2
 
 models:
   - name: core__source1_nv_monthly_extract_cleansed
-    description: Extract of source 1 (NV) leads -- cleansed
+    description: Extract of source 1 (NV) leads -- cleansed  
+  - name: core__source2_ok_monthly_extract_cleansed
+    description: Extract of source 2 (OK) leads -- cleansed
